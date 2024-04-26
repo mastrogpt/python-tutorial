@@ -12,4 +12,30 @@ return {
     "url": "mastrogpt/demo",
 },
 
-##
+## 2a generate the role as shown in test2.test_request
+system = {"role": "system", "content": role}
+user = {"role": "user", "content": input}
+return [system, user]
+
+## 2b add the OpenAI entry, an object with name OpenAI and url openai/chat
+{ 
+    "name": "OpenAI", 
+    "url": "openai/chat",
+},
+
+## 3a connect with Azure OpenAI
+ai = AzureOpenAI(
+    api_version="2023-12-01-preview", 
+    api_key=args.get("OPENAI_API_KEY"), 
+    azure_endpoint=args.get("OPENAI_API_HOST"))
+
+## 3b invoke the chat completion
+comp = ai.chat.completions.create(
+    model=MODEL, 
+    messages=request(input, role)
+)
+
+## 3c read the first message content if any
+if len(comp.choices) >0:
+    res = comp.choices[0].message.content
+
