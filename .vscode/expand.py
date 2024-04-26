@@ -48,10 +48,7 @@ def contract(lines, num):
         return line, end+1
     return None, 0
 
-def main(args):
-    file = args[0]
-    num = int(args[1]) -1
-    sol = args[2]
+def main(file, num, sol):
     # load
     lines = Path(file).read_text().splitlines(keepends=True)
     # contracting
@@ -66,5 +63,12 @@ def main(args):
     Path(file).write_text("".join(lines))
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    args = sys.argv[1:]
+
+    file = args[0]
+    num = int(args[1]) -1
+    sol = args[2]
+
+    main(file, num, sol)
+
 

@@ -1,17 +1,14 @@
 # search for '## 3' in packages and solve issues
 
-import packages.openai.chat as chat
-from unittest.mock import patch
+import os
+import pytest
+import subprocess
 
-def save_args(self, **kwargs):
-    self.kwargs = kwargs
+import packages.openai.chat as chat
+
 
 def test_connect():
-    args = {"OPENAI_API_KEY": "dummy", "OPENAI_API_HOST": "dummy"}
-    with patch("openai.AzureOpenAI.__init__", side_effect=save_args):
-        ai = chat.connect(args)
-        print(ai)
-        assert True
+    assert False
 
 def test_request():
-    assert True
+    assert False

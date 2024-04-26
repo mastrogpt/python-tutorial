@@ -1,3 +1,4 @@
+# copy, cmd-k cmd-s, document and paste 
 [{
     "key": "cmd+alt+t",
     "command": "workbench.action.tasks.runTask",
