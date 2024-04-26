@@ -4,19 +4,20 @@ import packages.mastrogpt.demo as demo
 import packages.mastrogpt.index as index
 
 def test_demo():
-    # Expect result: 
+    # expected result: 
     # {
     #   "body": "You said: nothing"
     # }
     assert demo.main({})["body"] == "You said: nothing"
-    # Expect result:
+
+    # expected result:
     # {
     #   "body": "You said: hello"
     # }
     assert demo.main({"input": "hello"})["body"] == "You said: hello"
 
 def test_index():
-    # Expect result:
+    # expected result:
     # {
     #   "body": {
     #      "services": {

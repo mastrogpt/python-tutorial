@@ -1,10 +1,8 @@
 #--web true
 def main(args):
 
-    # read input field from args in input
-    input = args.get("input", "nothing")
+    ## 1a read input field from args in input, return 'nothing' as default
     
-
     # produce output from input
     output = f"You said: {input}"
 

@@ -1,4 +1,4 @@
-## 1a read input field from args in input
+## 1a read input field from args in input, return 'nothing' as default
 input = args.get("input", "nothing")
 
 ## 1b return a dictionary with a body

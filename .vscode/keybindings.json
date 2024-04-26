@@ -1,5 +1,5 @@
 [{
-    "key": "cmd+alt+t",
+    "key": "alt+cmd+t",
     "command": "workbench.action.tasks.runTask",
-    "args": "Expand"
+    "args": "expand"
 }]
