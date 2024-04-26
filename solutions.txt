@@ -1,9 +1,9 @@
 ## 1a read input field from args in input, return 'nothing' as default
 input = args.get("input", "nothing")
 
-## 1b return a dictionary with a body
+## 1b return a dictionary with 'body' which is a dictionary with 'output'
 return {
-    "body": output
+    "body": { "output": output }
 }
 
 ## 1c add the demo entry, an object with name Demo and url mastrogpt/demo
