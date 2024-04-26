@@ -4,11 +4,13 @@
     "runArgs": [
         "--init"
     ],
+    "postStartCommand": "pip install pytest",
     "customizations": {
         "vscode": {
             "extensions": [
                 "nuvolaris.nuvolaris-vscode-extension",
-                "ms-python.python"
+                "ms-python.python",
+                "pamaron.pytest-runner"
             ]
         }
     }
