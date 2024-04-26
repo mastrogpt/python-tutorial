@@ -22,13 +22,19 @@ def ask(ai, input, role=ROLE):
     
     return res
 
-def main(args):
-    ai = None
+def connect(args):
     ## 3a connect ai with Azure OpenAI
+    pass
+
+def main(args):
+    # connect to the AI
+    ai = connect(args)
 
     # read input and produce output
     input = args.get("input", "")
     output = ask(ai, input)
+
+    # return the result
     return {
         "body": { "output": output}
     }

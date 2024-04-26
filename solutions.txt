@@ -24,7 +24,7 @@ return [system, user]
 },
 
 ## 3a connect with Azure OpenAI
-ai = AzureOpenAI(
+return  AzureOpenAI(
     api_version="2023-12-01-preview", 
     api_key=args.get("OPENAI_API_KEY"), 
     azure_endpoint=args.get("OPENAI_API_HOST"))
