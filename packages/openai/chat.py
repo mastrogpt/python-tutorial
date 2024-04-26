@@ -15,10 +15,20 @@ def request(input, role=ROLE):
 def ask(ai, input, role=ROLE):
     
     comp = None
-    ## 3b invoke the chat completion
+    #: 3b invoke the chat completion
+    comp = ai.chat.completions.create(
+        model=MODEL, 
+        messages=request(input, role)
+    )
+    
+    #.
 
     res = "Sorry, there is an error"
-    ## 3c read the first message content if any
+    #: 3c read the first message content if any
+    if len(comp.choices) >0:
+        res = comp.choices[0].message.content
+    
+    #.
     
     return res
 

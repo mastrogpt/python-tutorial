@@ -27,7 +27,7 @@ def expand(sol,line):
         num = match.group(2)
         pref = match.group(1)
         rest = match.group(3)
-        #print(id, len(pref))
+        print("Expanding", num, rest)
         line = extract(sol, num, pref, rest)
     return line
 
@@ -36,10 +36,9 @@ def contract(lines, num):
     pattern = r'^(\s*)#: (.*)$'
     match = re.search(pattern, line)
     if match:
-        print("contracting")
         pref = match.group(1)
         rest = match.group(2)
-        print(rest)
+        print("Contracting:", rest)
         line = f"{pref}## {rest}\n"
         end = num + 1
         while not lines[end].strip().startswith("#."):
