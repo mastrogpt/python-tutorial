@@ -23,7 +23,13 @@ def ask(ai, input, role=ROLE):
     return res
 
 def connect(args):
-    ## 3a connect ai with Azure OpenAI
+    #: 3a connect ai with Azure OpenAI
+    return  AzureOpenAI(
+        api_version="2023-12-01-preview", 
+        api_key=args.get("OPENAI_API_KEY"), 
+        azure_endpoint=args.get("OPENAI_API_HOST"))
+    
+    #.
     pass
 
 def main(args):
