@@ -1,7 +1,7 @@
-## 1a read input field from args in input, return 'nothing' as default
-input = args.get("input", "nothing")
+## 1a read the input field from args in input, return '' as default
+input = args.get("input", "")
 
-## 1b return a dictionary with 'body' which is a dictionary with 'output'
+## 1b return a dictionary with key 'body' and value output
 return {
     "body": { "output": output }
 }

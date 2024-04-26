@@ -1,4 +1,4 @@
-# search for '## 1' and solve issues
+# search for '## 1' in packages and solve issues
 
 import packages.mastrogpt.demo as demo
 import packages.mastrogpt.index as index
@@ -6,13 +6,13 @@ import packages.mastrogpt.index as index
 def test_demo():
     # expected result: 
     # {
-    #   "body": "You said: nothing"
+    #   "body": { "output": "You said: nothing" }
     # }
     assert demo.main({})["body"] == "You said: nothing"
 
     # expected result:
     # {
-    #   "body": "You said: hello"
+    #   "body": { "output": "You said: hello" }
     # }
     assert demo.main({"input": "hello"})["body"] == "You said: hello"
 
