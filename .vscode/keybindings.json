@@ -1,0 +1,5 @@
+[{
+    "key": "cmd+alt+t",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Expand"
+}]

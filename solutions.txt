@@ -1,0 +1,15 @@
+## 1a read input field from args in input
+input = args.get("input", "nothing")
+
+## 1b return a dictionary with a body
+return {
+    "body": output
+}
+
+## 1c add the demo entry, an object with name Demo and url mastrogpt/demo
+{ 
+    "name": "Demo", 
+    "url": "mastrogpt/demo",
+},
+
+##
