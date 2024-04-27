@@ -65,3 +65,10 @@ https://www.nuvolaris.io
 
 xxx
 
+---
+
+![bg](https://fakeimg.pl/350x200/ff0000,0/000?text=Invoking+Completions&retina=1)
+
+---
+
+xxx
