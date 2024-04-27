@@ -7,10 +7,5 @@ def main(args):
     input = "nothing" if input == "" else input
     output = { "output": f"You said: {input}" }
 
-    #: 1b return a dictionary with key 'body' and value 
-    return {
-        "body": output 
-    }
-    
-    #.
+    ## 1b return a dictionary with key 'body' and value 
     

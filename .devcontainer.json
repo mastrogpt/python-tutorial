@@ -10,7 +10,8 @@
             "extensions": [
                 "nuvolaris.nuvolaris-vscode-extension",
                 "ms-python.python",
-                "pamaron.pytest-runner"
+                "pamaron.pytest-runner",
+                "marp-team.marp-vscode"
             ]
         }
     }

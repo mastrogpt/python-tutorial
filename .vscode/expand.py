@@ -43,7 +43,7 @@ def contract(lines, num):
         end = num + 1
         while not lines[end].strip().startswith("#."):
             end += 1
-        print(line, num, end)
+        #print(line, num, end)
         return line, end+1
     return None, 0
 
