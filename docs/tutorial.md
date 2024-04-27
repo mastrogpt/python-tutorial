@@ -38,10 +38,8 @@ https://www.nuvolaris.io
 { "body": "<h1>Hello</h1>"}
 ```
 
-
 --- 
-
-# Exercise 1 
+# Implementing a simple chat
 
 ### A function tht accepts `input` and return `output`
 
@@ -53,22 +51,81 @@ https://www.nuvolaris.io
 
 - `[1c]` Add the function to the index to use it...
 
----
-
-# You can now chat with the function!
+### You can chat with the function!
 
 ---
 
 ![bg](https://fakeimg.pl/350x200/ff0000,0/000?text=Using+OpenAI&retina=1)
 
 ---
+# Connecting to OpenAI
 
-xxx
+```python
+from openai import AzureOpenAI
+ 
+ver = "2023-12-01-preview"
+# key and host provided by MastroGPT
+key = args.get("OPENAI_API_KEY")
+host = args.get("OPENAI_API_HOST")
+# api call
+ai =  AzureOpenAI(
+    api_version=ver, 
+    api_key=key, 
+    azure_endpoint=host)
+```
+
+- `[2a]` connect ai with Azure OpenAI and return the api object
+
+
+---
+# Ckecking the connection
+
+```python
+# retrieve informations about a model
+MODEL = "gpt-35-turbo"
+model = ai.models.retrieve(MODEL)
+# if ok model.status == 'succeded'
+```
+
+- `[2b]` retrieve the model we use, check the status  and return 'Welcome.' if is 'succeded'
+
+- `[2c]` add the new chat to the indes
+
+## Chat with it and verify you get `Welcome`
+---
+
+![bg](https://fakeimg.pl/350x200/ff0000,0/000?text=Chat+with+GPT&retina=1)
+
+---
+## Create a request
+
+Structure of a request:
+
+```python
+[
+   {"role": "system", "content": ROLE},
+   {"role": "user", "content": input}
+] 
+```
+
+- `[3a]` a function to return a request
 
 ---
 
-![bg](https://fakeimg.pl/350x200/ff0000,0/000?text=Invoking+Completions&retina=1)
+## Invoke a request and return the result
 
----
+```python
+comp = ai.chat.completions.create(
+    model=MODEL, 
+    messages=request(input, role)
+)
+```
+- `[3b]` invoke the chat completion API
 
-xxx
+```python
+res = comp.choices[0].message.content
+```
+
+ - `[3c]` read the first message content if any
+
+### Now you can chat with the AI

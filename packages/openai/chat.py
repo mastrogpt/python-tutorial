@@ -35,7 +35,7 @@ def main(args):
     input = args.get("input", "")
 
     output = "Connection Error."
-    ## 2b if the connection is not closed, return 'Welcome.'
+    ## 2b retrieve the model we use, check the status and return 'Welcome.' if is 'succeded'
 
     # if the input is not empty, ask to the AI
     if input != "":
@@ -43,5 +43,5 @@ def main(args):
 
     # return the result
     return {
-        "body": { "output": output}
+        "body": { "output": output }
     }
