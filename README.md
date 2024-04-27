@@ -31,11 +31,14 @@ Steps are numbered: `1a`, `1b`, `2a`, `2b', `2c` and so on.
 
 You can search for `##` in the folder `package` to find all the exercises:
 
-![](./docs/search-tests.png)
+![](./docs/search-exercises.png)
 
 Implement exercises in order (`1a`, `1b`, `1c`) then run the tests to ensure you did correctly.
 
-Note that to pass `text_X` you need to implement all the `Xa`, Xb`, ... `Xz` to pass the test.
+Note that exercises are grouped: to pass `text_X` you need to implement all the `Xa`, `Xb`, ... `Xn`.
+
+![](./docs/run-tests.png)
+
 
 Enjoy!
 

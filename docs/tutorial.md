@@ -10,9 +10,9 @@ html: true
 
 ![bg left:40% 80%](./logo-full-transparent.png)
 
-# **Nuvolaris Trainings**
-## Nuvolaris Operator
+# **MastroGPT Training**
+## Implementing a Chatbot with Nuvolaris
 
-Part 1: Introducting Kubernetes Operators
 
 https://www.nuvolaris.io
+

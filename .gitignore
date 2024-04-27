@@ -2,6 +2,7 @@
 .env
 .task/
 __pycache__/
+.pytest_cache/
 venv/
 .DS_Store
 _*
@@ -9,4 +10,4 @@ _*
 content/posts/media/
 .user
 packages/*/*.zip
-util/requirements.txt
+

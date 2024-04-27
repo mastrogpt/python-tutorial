@@ -5,6 +5,7 @@ import packages.openai.chat as chat
 import packages.mastrogpt.index as index
 
 
+# this test checks you are connecting
 def test_request():
     r = chat.request("2+2")
     assert r == [

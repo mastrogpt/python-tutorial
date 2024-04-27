@@ -32,7 +32,12 @@ def main(args):
 
     # read input and produce output
     input = args.get("input", "")
-    output = ask(ai, input)
+
+    output = ""
+    ## 3d define the default message 'Welcome.'
+
+    if input != "":
+        output = ask(ai, input)
 
     # return the result
     return {

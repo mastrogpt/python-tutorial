@@ -39,3 +39,6 @@ comp = ai.chat.completions.create(
 if len(comp.choices) >0:
     res = comp.choices[0].message.content
 
+## 3d define the default message 'Welcome.'
+output = "Welcome."
+##
