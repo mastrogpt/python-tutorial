@@ -35,7 +35,6 @@ def main(args):
     input = args.get("input", "")
 
     output = "Connection Error."
-
     ## 2b if the connection is not closed, return 'Welcome.'
 
     # if the input is not empty, ask to the AI
