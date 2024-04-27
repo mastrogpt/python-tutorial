@@ -34,7 +34,7 @@ def main(args):
     input = args.get("input", "")
 
     output = ""
-    ## 3d define the default message 'Welcome.'
+    ## 2b define the default message 'Welcome.'
 
     if input != "":
         output = ask(ai, input)
