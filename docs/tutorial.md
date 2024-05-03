@@ -89,7 +89,7 @@ model = ai.models.retrieve(MODEL)
 
 - `[2b]` retrieve the model we use, check the status  and return 'Welcome.' if is 'succeeded'
 
-- `[2c]` add the new chat to the indes
+- `[2c]` add the new chat to the index
 
 ## Chat with it and verify you get `Welcome`
 ---
